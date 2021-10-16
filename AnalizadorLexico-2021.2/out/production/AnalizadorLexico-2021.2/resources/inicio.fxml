@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="588.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.compiladores.controladores.inicioController">
+   <children>
+      <TextArea fx:id="campoTexto" layoutX="13.0" layoutY="52.0" prefHeight="206.0" prefWidth="572.0" />
+      <TabPane fx:id="tabPane" layoutX="14.0" layoutY="274.0" prefHeight="302.0" prefWidth="572.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabLexico" text="LEXICO">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaLexico" prefHeight="266.0" prefWidth="572.0">
+                          <columns>
+                            <TableColumn fx:id="colLexema" prefWidth="111.79999351501465" text="LEXEMA" />
+                            <TableColumn fx:id="colCategoria" minWidth="0.0" prefWidth="282.59996032714844" text="CATEGORIA" />
+                              <TableColumn fx:id="colFila" minWidth="0.0" prefWidth="74.79998779296875" text="FILA" />
+                              <TableColumn fx:id="colColumna" prefWidth="103.5999755859375" text="COLUMNA" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabErrores" text="ERRORES">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tablaErrores" prefHeight="267.0" prefWidth="572.0">
+                          <columns>
+                            <TableColumn fx:id="colError" prefWidth="418.19999980926514" text="ERROR" />
+                              <TableColumn fx:id="colFilaError" prefWidth="61.199951171875" text="FILA" />
+                              <TableColumn fx:id="colColumnaError" prefWidth="94.800048828125" text="COLUMNA" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="btnAnalizar" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" onAction="#analizarCodigo" text="Analizar Codigo" />
+   </children>
+</AnchorPane>
